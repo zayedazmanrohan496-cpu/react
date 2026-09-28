@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Technologies from './components/Technologies';
 import type { ITechnologies } from './types';
+import Footer from './components/Footer';
 
 const usersFetch = async (): Promise<ITechnologies[]> => {
   const response = await fetch("/technologies.json");
@@ -30,8 +31,7 @@ const App = () => {
     <>
       <Nav />
       <Hero />
-      <footer/>
-
+     
       <Suspense fallback={<p>Loading technologies...</p>}>
         <Technologies
           usersPromise={usersPromise}
@@ -41,6 +41,8 @@ const App = () => {
           onClearAll={handleClearAll}
         />
       </Suspense>
+
+       <Footer/>
     </>
   );
 };
