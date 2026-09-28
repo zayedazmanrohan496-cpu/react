@@ -5,7 +5,8 @@ import Logo from "../assets/logo-text.png";
 const Nav = ()=> {
 
 
- return <div className="border-b border-gray-300">
+ return  <div className="fixed top-0 left-0 w-full z-50 border-b border-gray-300 bg-white">
+
   <nav className="flex justify-between gap-4  w-full max-w-7xl mx-auto px-4 py-4 ">
      
    <img src={Logo} className="w-[120px] h-[35px]" alt="" />
@@ -28,6 +29,9 @@ const Nav = ()=> {
  </nav>
 
  </div>
+
+
+
 };
 
 export default Nav;

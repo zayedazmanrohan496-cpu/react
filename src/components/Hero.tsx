@@ -7,7 +7,7 @@ const Hero = () => {
         
     
 
-       <div className='flex gap-4 items-center w-full max-w-7xl mx-auto px-6'>
+       <div className='flex gap-4 items-center w-full max-w-7xl mx-auto px-6 mt-[80px]'>
 
             <div>
 
