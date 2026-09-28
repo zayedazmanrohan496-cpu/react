@@ -4,6 +4,9 @@ import HeroImage from "../assets/banner-stack.png"
 
 const Hero = () => {
     return (
+        
+    
+
        <div className='flex gap-4 items-center w-full max-w-7xl mx-auto px-6'>
 
             <div>
@@ -25,7 +28,12 @@ const Hero = () => {
 
             </div>
 
+
         </div>
+
+           
+
+
     );
 };
 

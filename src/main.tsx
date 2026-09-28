@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Technologies from './components/Technologies'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -10,7 +11,8 @@ createRoot(document.getElementById('root')!).render(
     
   <Nav/>
   <Hero/>
-
+  <Technologies/>
+  
   </StrictMode>,
 )
 
