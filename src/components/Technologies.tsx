@@ -1,19 +1,39 @@
-import { use, useState } from "react";
+import { use, type Dispatch, type SetStateAction } from "react";
 import type { ITechnologies } from "../types";
+import Cart from "./Cart";
 
 interface ITechnologiesProps {
     usersPromise: Promise<ITechnologies[]>;
+    cart: ITechnologies[];
+    setCart: Dispatch<SetStateAction<ITechnologies[]>>;
+    onRemove: (id: string | number) => void;
+    onClearAll: () => void;
 }
 
-const Technologies = ({ usersPromise }: ITechnologiesProps) => {
+const Technologies = ({
+    usersPromise,
+    cart,
+    setCart,
+    onRemove,
+    onClearAll
+}: ITechnologiesProps) => {
 
     const data = use(usersPromise);
-
-    const [cart, setCart] = useState<ITechnologies[]>([]);
 
     // Add to Cart Function
     const handleAddToCart = (technology: ITechnologies) => {
         console.log("Clicked Add to cart", technology);
+
+        // Check if already added
+        const alreadyAdded = cart.some(
+            (item) => item.id === technology.id
+        );
+
+        // If already added, don't add again
+        if (alreadyAdded) {
+            return;
+        }
+
         setCart([...cart, technology]);
     };
 
@@ -117,9 +137,13 @@ const Technologies = ({ usersPromise }: ITechnologiesProps) => {
                 </div>
 
                 {/* Cart */}
-                <div className="col-span-3 bg-blue-500 h-[500px]">
+                <div className="col-span-3">
 
-                    {/* cart div */}
+                    <Cart
+                        cart={cart}
+                        onRemove={onRemove}
+                        onClearAll={onClearAll}
+                    />
 
                 </div>
 
