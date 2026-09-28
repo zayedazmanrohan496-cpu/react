@@ -30,6 +30,7 @@ const App = () => {
     <>
       <Nav />
       <Hero />
+      <footer/>
 
       <Suspense fallback={<p>Loading technologies...</p>}>
         <Technologies

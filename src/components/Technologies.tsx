@@ -1,6 +1,7 @@
 import { use, type Dispatch, type SetStateAction } from "react";
 import type { ITechnologies } from "../types";
 import Cart from "./Cart";
+import { toast } from "react-toastify";
 
 interface ITechnologiesProps {
     usersPromise: Promise<ITechnologies[]>;
@@ -35,6 +36,10 @@ const Technologies = ({
         }
 
         setCart([...cart, technology]);
+        toast.success(`${technology.name} added to cart!`, {
+        position: "bottom-right",
+        });
+       
     };
 
     console.log(cart, "cart");
