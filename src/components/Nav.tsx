@@ -14,10 +14,10 @@ const Nav = ()=> {
    <ul className="flex gap-4 items-center">
 
      <li className="text-[#D91B7E] p-[0px_5px]"><a href="#">Home</a></li>
-     <li className="p-[0px_5px]"><a href="#">Technologies</a></li>
-     <li className="p-[0px_5px]"><a href="#">Projects</a></li>
-     <li className="p-[0px_5px]"><a href="#">About</a></li>
-     <li className="p-[0px_5px]"><a href="#">Contact</a></li>
+     <li className="hover:text-[#D91B7E] p-[0px_5px]"><a href="#">Technologies</a></li>
+     <li className="hover:text-[#D91B7E] p-[0px_5px]"><a href="#">Projects</a></li>
+     <li className="hover:text-[#D91B7E] p-[0px_5px]"><a href="#">About</a></li>
+     <li className="hover:text-[#D91B7E] p-[0px_5px]"><a href="#">Contact</a></li>
 
    </ul>
 
